@@ -42,6 +42,6 @@ jobs:
     - name: Ver versão de Pitão
       run: |
             python --version
-            ls-all
+            ls -all
             echo "print("hello")"> hello.py
             python hello.py
