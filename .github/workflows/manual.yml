@@ -28,4 +28,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Criar Pasta
-      run: echo "Hello ${{ inputs.name }}"
+      run: mkdir ${{ inputs.name }}"
