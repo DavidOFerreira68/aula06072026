@@ -51,7 +51,6 @@ jobs:
       run: mkdir "${{ inputs.nome }}"
     - name: Ver versão de Pitão
       run: |
-            python --version
-            ls -all
+            cd "${{ inputs.nome }}"
             echo "print('${{ inputs.mensagem }}')"> "${{ inputs.fixeiro }}".py
             python "${{ inputs.fixeiro }}".py
