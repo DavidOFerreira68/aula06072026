@@ -38,6 +38,10 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Criar Pasta
-      run: mkdir "${{ inputs.name }}-${{ inputs.ambiente }}"
+      run: mkdir "${{ inputs.name }} - " "${{ inputs.ambiente }}"
     - name: Ver versão de Pitão
-      run: python --version
+      run: |
+            python --version
+            ls-all
+            echo "print("hello")"> hello.py
+            python hello.py
