@@ -28,6 +28,15 @@ on:
         # The data type of the input
         type: string
 
+      fixeiro:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'fixeiro'
+        # Default value if no value is explicitly provided
+        default: 'fixeiro'
+        # Input has to be provided for the workflow to run
+        required: true
+        # The data type of the input
+        type: string
 # A workflow run  is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -44,5 +53,5 @@ jobs:
       run: |
             python --version
             ls -all
-            echo "print('${{ inputs.mensagem }}')"> fluxo.py
-            python fluxo.py
+            echo "print('${{ inputs.mensagem }}')"> "${{ inputs.fixeiro }}".py
+            python "${{ inputs.fixeiro }}".py
